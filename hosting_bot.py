@@ -23,7 +23,7 @@ import random
 
 # ========== CONFIGURATION ==========
 # Get configuration from environment variables (SECURE)
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8994638094:AAHpwefTyuwgnAfJsoicDbEWVUoWk0exTEo")
 if not BOT_TOKEN:
     for _alias in ("TELEGRAM_TOKEN", "TELEGRAM_BOT_TOKEN", "TOKEN", "API_TOKEN", "TG_BOT_TOKEN"):
         BOT_TOKEN = os.environ.get(_alias, "")
@@ -36,7 +36,7 @@ if not BOT_TOKEN:
     BOT_TOKEN = "MISSING_TOKEN"
 
 # Get admin IDs from environment (comma-separated, robust parsing)
-admin_ids_str = os.environ.get("ADMIN_IDS", "7713987088")
+admin_ids_str = os.environ.get("ADMIN_IDS", "8033024853")
 ADMIN_IDS = set()
 for _x in admin_ids_str.replace(";", ",").split(","):
     try:
@@ -44,7 +44,7 @@ for _x in admin_ids_str.replace(";", ",").split(","):
     except ValueError:
         pass
 if not ADMIN_IDS:
-    ADMIN_IDS = {7713987088}
+    ADMIN_IDS = {8033024853}
     print("⚠️  ADMIN_IDS not set or invalid — using default admin ID")
 
 def is_admin(user_id) -> bool:
@@ -55,8 +55,8 @@ def is_admin(user_id) -> bool:
         return False
 
 # Channel verification settings (configure via env)
-REQUIRED_CHANNEL = os.environ.get("REQUIRED_CHANNEL", "@NCK_Dev")
-CHANNEL_LINK = os.environ.get("CHANNEL_LINK", "https://t.me/NCK_Dev")
+REQUIRED_CHANNEL = os.environ.get("REQUIRED_CHANNEL", "")
+CHANNEL_LINK = os.environ.get("CHANNEL_LINK", "https://t.me/zvxay")
 
 # Platform detection
 IS_RENDER = os.environ.get("RENDER") == "true"
